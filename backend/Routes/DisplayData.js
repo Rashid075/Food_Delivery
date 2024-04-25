@@ -23,6 +23,8 @@ router.post('/foodData', async (req, res) => {
 
         // Send response with fetched data
         res.send([fetchedData, catData]);
+        console.log(fetchedData)
+        console.log(catData)
 
     } catch (error) {
         console.error('Error connecting to MongoDB:', error);
