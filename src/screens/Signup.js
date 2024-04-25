@@ -23,9 +23,10 @@ export default function Signup() {
         setcredentials({...credentials,[event.target.name]:event.target.value})
     }
   return (
-    <>
+    <div className='p-3 m-0 bg-success text-white'>
     <div className="container">
-      <form onSubmit={handleSubmit}>
+      <div className='text-center m-5'><h2>SignUP</h2></div>
+      <form onSubmit={handleSubmit} className='col-md-4 d-block m-auto'>
         <div className="mb-3">
           <label htmlFor="name" className="form-label">Name</label>
           <input type="name" className="form-control" name='name' value={credentials.name} onChange={change} />
@@ -47,6 +48,6 @@ export default function Signup() {
         <Link to='/login' className="m-3 btn btn-danger">Already a User</Link>
       </form>
     </div>
-    </>
+    </div>
   );
 }

@@ -92,7 +92,7 @@ export default function Home() {
       </button>
     </div>
       </div>
-      <div className="container">
+      <div className="container" >
         {
           foodCat!==[]?foodCat.map((data)=>{
             return(

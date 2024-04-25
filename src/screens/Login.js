@@ -30,9 +30,10 @@ export default function Login() {
         setcredentials({...credentials,[event.target.name]:event.target.value})
     }
   return (
-    <div>
+    <div className='p-5  bg-success text-white'>
       <div className="container">
-      <form onSubmit={handleSubmit}>
+      <div className='text-center p-5 m-1 '><h2>Login</h2></div>
+      <form onSubmit={handleSubmit} className='col-md-4 d-block m-auto p-5'>
         <div className="mb-3">
            <label htmlFor="exampleInputEmail1" className="form-label">Email address</label>
            <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name='email' value={credentials.email}onChange={change} />
@@ -42,7 +43,7 @@ export default function Login() {
           </label>
           <input type="password" className="form-control" id="exampleInputPassword1" name='password' value={credentials.password} onChange={change} />
         </div>
-        <button type="submit" className="m-3 btn btn-success">Submit</button>
+        <button type="submit" className="m-3 btn btn-light">Submit</button>
         <Link to='/createuser' className="m-3 btn btn-danger">SignUp</Link>
       </form>
     </div>
